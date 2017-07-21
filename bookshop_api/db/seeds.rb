@@ -5,3 +5,9 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Customer.delete_all
+
+customer1 = Customer.create({name: "Garry"})
+customer2 = Customer.create({name: "Ben"})
+customer3 = Customer.create({name: "Emma"})
