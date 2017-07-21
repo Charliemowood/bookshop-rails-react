@@ -8,6 +8,7 @@
 
 Customer.delete_all
 Book.delete_all
+Order.delete_all
 
 customer1 = Customer.create({name: "Garry"})
 customer2 = Customer.create({name: "Ben"})
@@ -38,3 +39,8 @@ book3 = Book.create({
   stock: 10,
   status: "medium"
   })
+
+Order.create({customer: customer1, book: book1})
+Order.create({customer: customer2, book: book1})
+Order.create({customer: customer3, book: book2})
+Order.create({customer: customer2, book: book2})
