@@ -6,6 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+Author.delete_all
 Customer.delete_all
 Book.delete_all
 Order.delete_all
@@ -14,12 +15,17 @@ customer1 = Customer.create({name: "Garry"})
 customer2 = Customer.create({name: "Ben"})
 customer3 = Customer.create({name: "Emma"})
 
+author1 = Author.create({name: "Enid Blyton", genre: "children"})
+author2 = Author.create({name: "WE Johns", genre: "children"})
+author3 = Author.create({name: "Hilda Lewis", genre: "children"})
+
 book1 = Book.create({
   title: "Biggles Flies North",
   price: 10,
   img: "placeholder",
   stock: 30,
-  status: "low"
+  status: "low",
+  author: author1
   })
 
 
@@ -29,6 +35,7 @@ book2 = Book.create({
   img: "placeholder",
   stock: 3,
   status: "high"
+  # author: author2
   })
 
 
@@ -38,6 +45,7 @@ book3 = Book.create({
   img: "placeholder",
   stock: 10,
   status: "medium"
+  # author: author3
   })
 
 Order.create({customer: customer1, book: book1})
