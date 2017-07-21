@@ -1,0 +1,8 @@
+Fri, 21 Jul 2017 22:45:23 +0100
+README.rdoc	Fri, 21 Jul 2017 11:35:20 +0100
+app/controllers/application_controller.rb	Fri, 21 Jul 2017 11:35:20 +0100
+app/helpers/application_helper.rb	Fri, 21 Jul 2017 11:35:20 +0100
+app/models/author.rb	Fri, 21 Jul 2017 21:23:22 +0100
+app/models/book.rb	Fri, 21 Jul 2017 21:23:07 +0100
+app/models/customer.rb	Fri, 21 Jul 2017 13:22:08 +0100
+app/models/order.rb	Fri, 21 Jul 2017 12:58:57 +0100
