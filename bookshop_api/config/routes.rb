@@ -1,8 +1,16 @@
 Rails.application.routes.draw do
 
   scope 'api' do
-    resources :books
+    resources :books do
+      :authors
+    end
   end
+
+  scope 'api' do
+    resources :customers
+  end
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
