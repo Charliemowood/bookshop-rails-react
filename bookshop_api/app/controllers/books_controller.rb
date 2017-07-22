@@ -16,7 +16,7 @@ class BooksController < ApplicationController
   private
   def json_config
     return {
-      except: [:created_at, :updated_at],
+      except: [:created_at, :updated_at, :author_id],
       include: {
         author: { only: :name }
       }
