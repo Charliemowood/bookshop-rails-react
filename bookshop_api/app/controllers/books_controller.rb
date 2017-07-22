@@ -1,10 +1,25 @@
 class BooksController < ApplicationController
   def index
-    @books = Book.all
-    render json: @books.as_json({except: [:created_at, :updated_at]})
+    if params[:author_id]
+     books = Author.find(params[:author_id]).books
+    else
+     books = Book.all
+    end
+    render json: books.as_json(json_config)
   end
+
 
   def show
 		render json: Book.find(params[:id])
-	end
+  end
+
+  private
+  def json_config
+    return {
+      except: [:created_at, :updated_at],
+      include: {
+        author: { only: :name }
+      }
+    }
+  end
 end

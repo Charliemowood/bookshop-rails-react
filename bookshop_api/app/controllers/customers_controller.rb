@@ -8,3 +8,13 @@ class CustomersController < ApplicationController
     render json: Customer.find(params[:id])
   end
 end
+
+#
+
+#
+# def show
+#   render json: Player.find(params[:id]).as_json(json_config)
+# end
+#
+# private
+#

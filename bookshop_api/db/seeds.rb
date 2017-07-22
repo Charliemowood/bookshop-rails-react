@@ -34,8 +34,8 @@ book2 = Book.create({
   price: 7,
   img: "placeholder",
   stock: 3,
-  status: "high"
-  # author: author2
+  status: "high",
+  author: author2
   })
 
 
@@ -44,8 +44,8 @@ book3 = Book.create({
   price: 20,
   img: "placeholder",
   stock: 10,
-  status: "medium"
-  # author: author3
+  status: "medium",
+  author: author3
   })
 
 Order.create({customer: customer1, book: book1})
