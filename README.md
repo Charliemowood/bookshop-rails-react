@@ -16,3 +16,51 @@ You should be able to add stock, which should add author and book information as
 - Create authors
 - Show an inventory page listing book and authors
 - Show a stock level for the inventory items e.g. High/Medium/Low
+
+### Interacting with the Bookshop API
+
+The API is json based built using Ruby on Rails.
+
+Example request, to perform a GET request returning the INDEX of current books.
+```bash
+localhost:3000/api/books
+```
+
+Output of request:
+```json
+[
+ {
+  "id": 39,
+  "title": "Biggles Flies North",
+  "price": 10,
+  "img": "placeholder",
+  "stock": 30,
+  "status": "low",
+  "author": {
+  "name": "Enid Blyton"
+ }
+},
+ {
+  "id": 40,
+  "title": "Five Run Away",
+  "price": 7,
+  "img": "placeholder",
+  "stock": 3,
+  "status": "high",
+  "author": {
+  "name": "WE Johns"
+ }
+},
+ {
+  "id": 41,
+  "title": "The ship that flew",
+  "price": 20,
+  "img": "placeholder",
+  "stock": 10,
+  "status": "medium",
+  "author": {
+  "name": "Hilda Lewis"
+ }
+}
+]
+```
