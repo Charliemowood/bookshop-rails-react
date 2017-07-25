@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Container from './containers/container.jsx'
 
 window.addEventListener('load', function () {
   ReactDOM.render(
-    <img src="images/railtracks.png"/>,
+    <Container/>,
     document.getElementById('app')
   );
 });
