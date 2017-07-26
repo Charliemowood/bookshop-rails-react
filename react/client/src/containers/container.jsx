@@ -35,23 +35,23 @@ class Container extends React.Component {
 
   render() {
 
-    var names = this.state.bookNames
-    var namesList = names.map(function(book, index) {
-
-          return (
-
-          <li key={ index }>
-            <p>Title: {book.title}</p>
-            <p>Author: {book.author.name}</p>
-            <p>Price: ${book.price}</p>
-            <p>Stock: {book.stock}</p>
-            <p>Warning Level: {book.status}</p>
-          </li>
-         )})
+    // var names = this.state.bookNames
+    // var namesList = names.map(function(book, index) {
+    //
+    //       return (
+    //
+    //       <li key={ index }>
+    //         <p>Title: {book.title}</p>
+    //         <p>Author: {book.author.name}</p>
+    //         <p>Price: ${book.price}</p>
+    //         <p>Stock: {book.stock}</p>
+    //         <p>Warning Level: {book.status}</p>
+    //       </li>
+    //      )})
 
     return(
       <ul>
-         {namesList}
+         <Book bookList={this.state.bookNames}/>
         </ul>
     )
   }

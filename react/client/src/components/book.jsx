@@ -4,11 +4,23 @@ import React from 'react'
 class Book extends React.Component {
 
    render(props) {
-     console.log(props)
+     var names = this.props.bookList
+     var namesList = names.map(function(book, index) {
+
+           return (
+
+           <li key={ index }>
+             <p>Title: {book.title}</p>
+             <p>Author: {book.author.name}</p>
+             <p>Price: ${book.price}</p>
+             <p>Stock: {book.stock}</p>
+             <p>Warning Level: {book.status}</p>
+           </li>
+          )})
+          
    return (
       <div>
-        <p>Title: this.props.title</p>
-        <p>Price: this.props.price</p>
+        {namesList}
       </div>
 
   )
