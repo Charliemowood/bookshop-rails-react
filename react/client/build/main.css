@@ -1,0 +1,9 @@
+body {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+li {
+  border: black solid 1px;
+  list-style-type: none;
+  padding: 10px;
+}
