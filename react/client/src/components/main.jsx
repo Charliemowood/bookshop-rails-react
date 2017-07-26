@@ -1,7 +1,8 @@
 import React from 'react'
-import Book from '../components/book.jsx'
+import Book from './book.jsx'
+import {Link} from 'react-router-dom'
 
-class Container extends React.Component {
+class Main extends React.Component {
   constructor(props){
     super(props);
     // provide a model for the data
@@ -35,12 +36,17 @@ class Container extends React.Component {
   render() {
 
     return(
-      <ul>
-         <Book bookList={this.state.bookNames}/>
-        </ul>
+      <div>
+
+        <ul className="nav">
+         <li className="topnav"><Link to="/" className="white">Home</Link></li>
+         <li className="topnav"><Link to="/about" className="white">About</Link></li>
+         <li className="topnav"><Link to="/book" className="white">Book List</Link></li>
+       </ul>
+      </div>
     )
   }
 
 }
 
-export default Container
+export default Main

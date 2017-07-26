@@ -2,9 +2,37 @@ body {
   font-family: 'Ubuntu', sans-serif;
 }
 
-li {
+li.bordered {
   border: black solid 1px;
   list-style-type: none;
   padding: 10px;
   margin-bottom: 5px;
+}
+
+button.create {
+  position: absolute;
+  right: 0px;
+  padding: 2px;
+}
+
+ul.nav {
+
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  margin-bottom: 1.5em;
+}
+
+li.topnav {
+    float: left;
+}
+
+.white {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
