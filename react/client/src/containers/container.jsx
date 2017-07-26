@@ -37,17 +37,17 @@ class Container extends React.Component {
   render() {
 
     var names = this.state.bookNames
-
-    // const items = this.state.bookNames.forEach((book, index) => {
+    var namesList = names.map(function(book, index) {
+          return <li key={ index }>{book.title}</li>;
+          })
+    // const items = this.state.bookNames.forEach((book, index => {
     //
     //   <Book item={book} key={index}/>
     // })
 
     return(
       <ul>
-            {names.map(function(book, index){
-                return <li key={ index }>{book.title}</li>;
-              })}
+         {namesList}
         </ul>
     )
   }
