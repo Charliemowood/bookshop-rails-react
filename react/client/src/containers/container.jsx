@@ -36,15 +36,19 @@ class Container extends React.Component {
 
   render() {
 
+
+    //why does li key thing have to be next to the return to work
     var names = this.state.bookNames
     var namesList = names.map(function(book, index) {
-          return <li key={ index }>{book.title}</li>;
-          })
-    // const items = this.state.bookNames.forEach((book, index => {
-    //
-    //   <Book item={book} key={index}/>
-    // })
+          return (
+          <li key={ index }>
+            <p>Title: {book.title}</p>
+            <p>Price: ${book.price}</p>
+            <p>Stock: {book.stock}</p>
+            <p>Warning Level: {book.status}</p>
+          </li>
 
+         )})
     return(
       <ul>
          {namesList}
