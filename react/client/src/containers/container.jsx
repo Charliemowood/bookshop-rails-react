@@ -1,11 +1,14 @@
 import React from 'react'
 import { Dropdown } from '../components/dropdown.jsx'
+import Book from '../components/book.jsx'
 
 class Container extends React.Component {
   constructor(props){
     super(props);
+    // provide a model for the data
     this.state = {
-      bookNames: [{title:null}],
+      bookNames: [{img:null, title:null, price:null, stock:null, status:null}]
+
       // focusName: null
     };
     // State: countries, currentCountry
@@ -33,14 +36,19 @@ class Container extends React.Component {
 
   render() {
 
-// why does this render twice?
-console.log(this.state.bookNames[0])
+    var names = this.state.bookNames
+
+    // const items = this.state.bookNames.forEach((book, index) => {
+    //
+    //   <Book item={book} key={index}/>
+    // })
+
     return(
-      // why can I not console log in here?
-      // <Dropdown/>
-      <div>
-     <h1>{this.state.bookNames[0].title}</h1>
-     </div>
+      <ul>
+            {names.map(function(book, index){
+                return <li key={ index }>{book.title}</li>;
+              })}
+        </ul>
     )
   }
 
