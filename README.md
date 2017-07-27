@@ -64,8 +64,3 @@ Output of request:
 }
 ]
 ```
-
-Music listened to during the making of the project:
-
-DARIO D''ATTIS - SAD STORY FEAT. AOIDE
-ZEDD X SELENA GOMEZ - I WANT YOU TO KNOW
