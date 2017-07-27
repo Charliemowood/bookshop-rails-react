@@ -15,7 +15,6 @@ class Book extends React.Component {
              <p>Price: ${book.price}</p>
              <p>Stock: {book.stock}</p>
              <p>Warning Level: {book.status}</p>
-             <button type="button">Delete Book</button>
            </li>
 
           )})
