@@ -13,6 +13,18 @@ class BooksController < ApplicationController
 		render json: Book.find(params[:id])
   end
 
+
+  def destroy
+    book = Book.find(params[:id])
+
+    if book.destroy!
+      render :json => {status: :success}
+    else
+      render :json => {status: :delete_failed}
+    end
+  end
+
+
   private
   def json_config
     return {
