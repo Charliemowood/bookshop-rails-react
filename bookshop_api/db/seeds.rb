@@ -25,7 +25,7 @@ book1 = Book.create({
   img: "placeholder",
   stock: 30,
   status: "low",
-  author: author1
+  author: author2
   })
 
 
@@ -35,7 +35,7 @@ book2 = Book.create({
   img: "placeholder",
   stock: 3,
   status: "high",
-  author: author2
+  author: author1
   })
 
 
@@ -54,7 +54,7 @@ book4 = Book.create({
   img: "placeholder",
   stock: 5,
   status: "high",
-  author: author1
+  author: author2
   })
 
 book5 = Book.create({
@@ -63,7 +63,7 @@ book5 = Book.create({
   img: "placeholder",
   stock: 5,
   status: "high",
-  author: author1
+  author: author2
   })
 
 
