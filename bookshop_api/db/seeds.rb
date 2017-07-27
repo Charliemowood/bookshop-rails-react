@@ -40,13 +40,33 @@ book2 = Book.create({
 
 
 book3 = Book.create({
-  title: "The ship that flew",
+  title: "The Ship that Flew",
   price: 20,
   img: "placeholder",
   stock: 10,
   status: "medium",
   author: author3
   })
+
+book4 = Book.create({
+  title: "Biggles Sweeps The Desert",
+  price: 11,
+  img: "placeholder",
+  stock: 5,
+  status: "high",
+  author: author1
+  })
+
+book5 = Book.create({
+  title: "Biggles Foreign Legionaire",
+  price: 11,
+  img: "placeholder",
+  stock: 5,
+  status: "high",
+  author: author1
+  })
+
+
 
 Order.create({customer: customer1, book: book1})
 Order.create({customer: customer2, book: book1})
