@@ -1,21 +1,44 @@
-# Task
+# What is it?
 
-Use Ruby on Rails to build a backend with APIs and the front end frame React to render the content.
+This is a web app to model a bookshop. It uses Ruby on Rails to build a backend with APIs and the front end frame React to render the content.
 
-## Brief
-
-### Charlie's Czech Bookshop
+### Detailed scenario
 
 The owner of Charlie's Czech Bookshop, wants an app which will help him keep on top of his store's inventory. The customers will not see the app, the purpose is that that the site will be used to check stock levels and see what needs to order soon.
 
-You should be able to add stock, which should add author and book information as well as the quantity available.
+### Setup project locally
 
-### MVP:
+#### Setup rails backend
 
-- Create books with the quantity that are in stock
-- Create authors
-- Show an inventory page listing book and authors
-- Show a stock level for the inventory items e.g. High/Medium/Low
+1. Clone project and change directory into project.
+    ```git clone git@github.com:Charliemowood/bookshop-rails-react.git && cd bookshop-rails-react```
+2. Change directory into rails part of the part of the project.
+    ```cd bookshop_api```
+2. Install all gems needed.
+    ```bundle install```
+3. Migrate the datebase:
+    ```rake db:migrate```
+4. Seed the database:
+    ```rake db:seed```
+5. Start up the server that runs the API, keep running:
+    ```rails server -p 5000```
+
+#### Setup up React Front end
+
+1. From root of project change directory into React part of the project:
+    ```cd react```
+2. Install necessary packages from npm. 
+    ```npm install```
+3. Run webpack in new terminal window:
+    ```npm run build```
+4. Run server in new terminal window: 
+    ```node server.js```
+5. Navigate to server in your favorite browser:
+    ```localhost:3000```
+    
+To ensure that the app will function you will need to use one of the following addons and enable CORS. 
+https://addons.mozilla.org/en-US/firefox/addon/cors-everywhere/ </br>
+https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi?hl=en
 
 ### Interacting with the Bookshop API
 
